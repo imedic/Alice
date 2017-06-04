@@ -2,17 +2,23 @@
 
 public class PlayerController : MonoBehaviour
 {
+    public float speed = 6.0F;
+    public float jumpSpeed = 8.0F;
+    public float gravity = 20.0F;
+    private Vector3 moveDirection = Vector3.zero;
     void Update()
     {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 300.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 6.0f;
-
-        transform.Rotate(0, x, 0);
-
-        if(Input.GetAxis("Vertical") > 0)
+        CharacterController controller = GetComponent<CharacterController>();
+        if (controller.isGrounded)
         {
-            transform.Translate(0, 0, z);
-        }
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= speed;
+            if (Input.GetButton("Jump"))
+                moveDirection.y = jumpSpeed;
 
+        }
+        moveDirection.y -= gravity * Time.deltaTime;
+        controller.Move(moveDirection * Time.deltaTime);
     }
 }
