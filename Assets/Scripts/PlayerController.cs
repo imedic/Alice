@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-//using System.Collections;
-//using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 	public float speed = 10.0F;
@@ -11,9 +11,13 @@ public class PlayerController : MonoBehaviour {
 	//private float looker;
 	public float sensitivity = 5.0F;
 
+	//public GameObject deathParticles;
+	//private Vector3 origin;
+
 	// Use this for initialization
 	void Start () {
-
+		//gameObject.SetActive (true);
+		//origin = transform.position;
 	}
 
 	// Update is called once per frame
@@ -50,6 +54,19 @@ public class PlayerController : MonoBehaviour {
 		//Making the character move
 		controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	/*void OnCollisionEnter(Collision other) {
+		if (other.gameObject.tag == "Enemy") {
+			Instantiate (deathParticles, transform.position, Quaternion.identity);
+			transform.position = origin;
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.tag == "Goal") {
+			GameManager.gm.CompleteLevel();
+		}
+	}*/
 }
 
 /*
