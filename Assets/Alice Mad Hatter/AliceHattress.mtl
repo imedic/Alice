@@ -1,0 +1,196 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 12.01.2012 04:42:09
+
+newmtl Material__28
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+
+newmtl Material__29
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skirt_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skirt_DM.png
+
+newmtl Material__30
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skin_DMA.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skin_DMA.png
+
+newmtl Material__133
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Material__31
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceW_Eye_MadHatter_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceW_Eye_MadHatter_DM.png
+
+newmtl Material__33
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+
+newmtl Material__38
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\CubemapFace1.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\CubemapFace1.png
+
+newmtl Material__40
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\ClockHand_Min_DMA.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\ClockHand_Min_DMA.png
+
+newmtl Material__39
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\ClockHand_Hour_DMA.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\ClockHand_Hour_DMA.png
+
+newmtl Material__37
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+
+newmtl Material__27
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skirt_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skirt_DM.png
+
+newmtl Material__36
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skin_DMA.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Skin_DMA.png
+
+newmtl Material__35
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\AliceMadHatter_Cloth_DM.png
+
+newmtl Material__32
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\hair_DM.png
+	map_Kd C:\Users\Owner\Desktop\Madness Returns\Alice Hattress\images\hair_DM.png
