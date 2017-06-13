@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Cookie")
         {
             cookiesCollected++;
-            transform.localScale += new Vector3(0.05F, 0.05F, 0.05F);
+            transform.localScale += new Vector3(0.07F, 0.07F, 0.07F);
             Debug.Log(cookiesCollected);
             Destroy(other.gameObject);
         }
