@@ -66,7 +66,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     public float gravity = 10.0f;
     public float turnSmoothing = 15f;
     public float maxVelocityChange = 10.0f;
@@ -120,6 +120,40 @@ public class PlayerController : MonoBehaviour
             //{
             //    Rotate(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             //}
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				anim.SetBool ("Jump", true);
+			}
+			else {
+				anim.SetBool("Jump", false);
+			}
+			if (Input.GetKey(KeyCode.UpArrow)) {
+				anim.SetBool ("IsWalking", true);
+			}
+
+			else {
+				anim.SetBool("IsWalking", false);
+			}
+			if (Input.GetKey(KeyCode.DownArrow)) {
+				anim.SetBool ("IsWalkingBackward", true);
+			}
+
+			else {
+				anim.SetBool("IsWalkingBackward", false);
+			}
+			if (Input.GetKey(KeyCode.RightArrow) )  {
+				anim.SetBool ("IsStraf", true);
+			}
+
+			else {
+				anim.SetBool("IsStraf", false);
+			}
+			if (Input.GetKey(KeyCode.LeftArrow) )  {
+				anim.SetBool ("IsStrafLeft", true);
+			}
+
+			else {
+				anim.SetBool("IsStrafLeft", false);
+			}
         }
 
         // We apply gravity manually for more tuning control
