@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour {
 	public Transform[] patrolPoints;
 	public int speed = 5;
 	private int currentPoint;
+    private Vector3 nextDirection;
+    private Quaternion lookRotation;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,12 @@ public class EnemyController : MonoBehaviour {
 			currentPoint = 0;
 		}
 
-		transform.position = Vector3.MoveTowards (transform.position, patrolPoints[currentPoint].position, speed * Time.deltaTime);
+	    nextDirection = (patrolPoints[currentPoint].position - transform.position).normalized;
+	    lookRotation = Quaternion.LookRotation(nextDirection);
+
+	    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10);
+
+        transform.position = Vector3.MoveTowards (transform.position, patrolPoints[currentPoint].position, speed * Time.deltaTime);
+
 	}
 }

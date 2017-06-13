@@ -182,15 +182,14 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Cookie")
         {
             cookiesCollected++;
-            transform.localScale += new Vector3(0.07F, 0.07F, 0.07F);
             Debug.Log(cookiesCollected);
+            transform.localScale += new Vector3(0.05F, 0.05F, 0.05F);
             Destroy(other.gameObject);
         }
 
         if (other.tag == "Door" && cookiesCollected == cookieNumber)
         {
-            Debug.Log("NOVI LEVEL!");
-            //Application.LoadLevel(2);
+            SceneManager.LoadScene("Level2");
         }
 
         if (other.tag == "Enemy")
