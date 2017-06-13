@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 5.0f;
     public float gravity = 10.0f;
-    public float turnSmoothing = 15f;
+    public float turnSmoothing = 5.0f;
     public float maxVelocityChange = 10.0f;
     private bool grounded = false;
     private Rigidbody rigidbody;
