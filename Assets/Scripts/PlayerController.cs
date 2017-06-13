@@ -58,6 +58,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
@@ -67,14 +68,16 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 10.0f;
     public float gravity = 10.0f;
+    public float turnSmoothing = 15f;
     public float maxVelocityChange = 10.0f;
-    public bool canJump = true;
-    public float jumpHeight = 2.0f;
     private bool grounded = false;
     private Rigidbody rigidbody;
     static Animator anim;
-    public int cookiesCollected = 0;
+    private int cookiesCollected = 0;
     public int cookieNumber = 100;
+    private Vector3 movement;
+    private Vector3 turning;
+    private float turner;
 
     void Awake()
     {
@@ -88,12 +91,15 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded)
         {
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 targetVelocity = new Vector3(horizontal, 0, vertical);
             targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
 
-            // Apply a force that attempts to reach our target velocity
+            //// Apply a force that attempts to reach our target velocity
             Vector3 velocity = rigidbody.velocity;
             Vector3 velocityChange = (targetVelocity - velocity);
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
@@ -101,11 +107,19 @@ public class PlayerController : MonoBehaviour
             velocityChange.y = 0;
             rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            // Jump
-            if (canJump && Input.GetButton("Jump"))
+            turner = Input.GetAxis("Horizontal") * turnSmoothing;
+            //looker = -Input.GetAxis ("Mouse Y")* sensitivity;
+            //looker = -Input.GetAxis ("Vertical")* sensitivity;
+            if (turner != 0)
             {
-                rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+                //Code for action on mouse moving right
+                transform.eulerAngles += new Vector3(0, turner, 0);
             }
+
+            //if (horizontal != 0 && vertical != 0)
+            //{
+            //    Rotate(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            //}
         }
 
         // We apply gravity manually for more tuning control
@@ -113,6 +127,14 @@ public class PlayerController : MonoBehaviour
         //anim.SetBool("IsWalking", Input.GetAxis("Vertical") != 0);
 
         grounded = false;
+    }
+
+    void Rotate(float horizontal, float vertical)
+    {
+        Vector3 targetDirection = new Vector3(horizontal, 0, vertical);
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+        Quaternion newRotation = Quaternion.Lerp(rigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
+        rigidbody.MoveRotation(newRotation);
     }
 
     void OnCollisionStay()
@@ -136,12 +158,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("NOVI LEVEL!");
             //Application.LoadLevel(2);
         }
-    }
 
-    float CalculateJumpVerticalSpeed()
-    {
-        // From the jump height and gravity we deduce the upwards speed 
-        // for the character to reach at the apex.
-        return Mathf.Sqrt(2 * jumpHeight * gravity);
+        if (other.tag == "Enemy")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
