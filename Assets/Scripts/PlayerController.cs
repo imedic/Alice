@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.tag == "Door" && cookiesCollected == cookieNumber)
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if (other.tag == "Enemy")
